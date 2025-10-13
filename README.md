@@ -1,6 +1,6 @@
-# Race Day – Privacy Policy Site
+# Race Countdown – Privacy Policy Site
 
-This repository hosts the static Privacy Policy for the Race Day app.
+This repository hosts the static Privacy Policy for the Race Countdown app.
 
 ## Local Preview
 
