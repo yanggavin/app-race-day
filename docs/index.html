@@ -1,38 +1,558 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Race Countdown – Home</title>
-    <meta name="description" content="Race Countdown app information and links." />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <h1>Race Countdown</h1>
-      <p class="updated">Welcome to the Race Countdown app site</p>
-    </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Race Countdown App Support - Get help with tracking your race countdowns, managing events, and more.">
+    <title>Race Countdown - Support & Help</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <main>
-      <section>
-        <h2>About</h2>
-        <p>
-          Race Countdown is a simple companion app. This site hosts helpful links and
-          information, including our Privacy Policy.
-        </p>
-      </section>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
 
-      <section>
-        <h2>Links</h2>
-        <ul>
-          <li><a href="privacy-policy.html">Privacy Policy</a></li>
-          <li><a href="mailto:support@racecountdown-app.newtree.tech">Contact Support</a></li>
-        </ul>
-      </section>
-    </main>
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
 
-    <footer class="site-footer">
-      <p>&copy; 2025 Race Countdown</p>
-    </footer>
-  </body>
-  </html>
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 24px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 50px 40px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        h3 {
+            color: #333;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #555;
+            font-size: 16px;
+        }
+
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 16px;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .feature-list li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .faq-item {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .faq-answer {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .contact-box h3 {
+            color: white;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .contact-box p {
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 30px 40px;
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #ddd, transparent);
+            margin: 40px 0;
+        }
+
+        .platform-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #000;
+            color: white;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-right: 10px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 40px 20px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .faq-item {
+                padding: 20px;
+            }
+
+            .contact-box {
+                padding: 30px 20px;
+            }
+
+            .footer {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="app-icon">🏃‍♂️</div>
+            <h1>Race Countdown</h1>
+            <p>Your Ultimate Race Tracking Companion</p>
+            <div style="margin-top: 20px;">
+                <span class="platform-badge">📱 iPhone</span>
+                <span class="platform-badge">🌐 iOS 13.0+</span>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- About Section -->
+            <div class="section">
+                <h2>📱 About Race Countdown</h2>
+                <p>Race Countdown helps athletes and fitness enthusiasts track countdowns to their upcoming races and events. Whether you're training for your first 5K or your 50th marathon, Race Countdown keeps you motivated and organized with beautiful countdowns, goal tracking, and performance analysis.</p>
+                
+                <h3>Key Features:</h3>
+                <ul class="feature-list">
+                    <li>Track unlimited races with countdown timers</li>
+                    <li>Set goal times and record actual finish times</li>
+                    <li>Add races directly to your calendar</li>
+                    <li>Share your race journey with beautiful screenshots</li>
+                    <li>Daily motivational quotes for inspiration</li>
+                    <li>Full bilingual support (English & Chinese)</li>
+                    <li>Dark mode support</li>
+                    <li>Works completely offline</li>
+                    <li>No account required - your data stays on your device</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Getting Started Section -->
+            <div class="section">
+                <h2>🚀 Getting Started</h2>
+                
+                <h3>1. Add Your First Race</h3>
+                <ol>
+                    <li>Tap the <strong>"+"</strong> button on the home screen</li>
+                    <li>Enter your race details:
+                        <ul>
+                            <li><strong>Race Name</strong>: e.g., "Boston Marathon 2025"</li>
+                            <li><strong>Date</strong>: Select your race date</li>
+                            <li><strong>Location</strong>: City or venue name</li>
+                            <li><strong>Race Type</strong>: Choose from Marathon, Half Marathon, 10K, 5K, etc.</li>
+                            <li><strong>Goal Time</strong>: Your target finish time (optional)</li>
+                        </ul>
+                    </li>
+                    <li>Tap <strong>"Save"</strong></li>
+                </ol>
+
+                <h3>2. View Your Races</h3>
+                <p>Your races appear on the home screen with countdown timers showing days, hours, and minutes until race day. Filter races by:</p>
+                <ul>
+                    <li><strong>All Races</strong>: View everything</li>
+                    <li><strong>Upcoming</strong>: Only future races</li>
+                    <li><strong>Past</strong>: Completed races</li>
+                </ul>
+
+                <h3>3. Track Your Performance</h3>
+                <ol>
+                    <li>After a race, tap on the race card</li>
+                    <li>Tap <strong>"Edit"</strong></li>
+                    <li>Add your <strong>Actual Time</strong></li>
+                    <li>Set the <strong>Status</strong> (Completed, DNF, DNS, or DQ)</li>
+                    <li>Compare your goal vs. actual performance!</li>
+                </ol>
+
+                <h3>4. Add to Calendar</h3>
+                <ol>
+                    <li>Tap on any race to view details</li>
+                    <li>Tap <strong>"Add to Calendar"</strong></li>
+                    <li>Grant calendar permission if prompted</li>
+                    <li>The race is added with automatic reminders (1 week and 1 day before)</li>
+                </ol>
+
+                <h3>5. Share Your Journey</h3>
+                <ol>
+                    <li>Tap the <strong>Share</strong> icon at the top of the home screen</li>
+                    <li>Choose <strong>"Share"</strong> to send to friends</li>
+                    <li>Or choose <strong>"Save to Photos"</strong> to keep for yourself</li>
+                    <li>Screenshots include a motivational quote and QR code!</li>
+                </ol>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- FAQ Section -->
+            <div class="section">
+                <h2>❓ Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: Is Race Countdown free to use?</div>
+                    <div class="faq-answer">A: Yes! Race Countdown is completely free with no ads, no in-app purchases, and no hidden fees. All features are available to all users.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: Do I need to create an account?</div>
+                    <div class="faq-answer">A: No account required! All your data is stored locally on your device. This means your privacy is protected, and you don't need internet access to use the app.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: How many races can I track?</div>
+                    <div class="faq-answer">A: Unlimited! Add as many races as you want. Whether you're tracking one marathon or an entire season of races, Race Countdown has you covered.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: Can I edit or delete a race?</div>
+                    <div class="faq-answer">A: Yes! Tap on any race card to view details, then tap "Edit" to modify race information. To delete a race, swipe left on the race card and tap "Delete".</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: Why doesn't the app show my actual time?</div>
+                    <div class="faq-answer">A: Actual time is only displayed for past races. Before race day, you'll only see your goal time. After the race date passes, you can add your actual finish time in the Edit screen.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: How do I change the app language?</div>
+                    <div class="faq-answer">A: Go to Settings (gear icon) → Language. You can choose English or Simplified Chinese. The app also follows your system language by default.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: How do I enable dark mode?</div>
+                    <div class="faq-answer">A: Go to Settings → Theme. You can choose Light, Dark, or System (which follows your device's dark mode setting).</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: Can I export my race data?</div>
+                    <div class="faq-answer">A: Export/import functionality is coming in a future update. Currently, all data is stored locally on your device.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: Will my data be backed up to iCloud?</div>
+                    <div class="faq-answer">A: Not currently. Cloud sync is planned for a future version. For now, your data is stored only on your device. Make sure to keep your device backed up!</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: What race types are supported?</div>
+                    <div class="faq-answer">A: Marathon, Half Marathon, 10K, 5K, Triathlon, and Other. You can use "Other" for any custom race type like ultra-marathons, obstacle course races, cycling events, etc.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: What do the race status options mean?</div>
+                    <div class="faq-answer">
+                        <strong>Planned:</strong> Default status for upcoming races<br>
+                        <strong>Completed:</strong> You finished the race<br>
+                        <strong>DNF (Did Not Finish):</strong> Started but didn't complete<br>
+                        <strong>DNS (Did Not Start):</strong> Registered but didn't start<br>
+                        <strong>DQ (Disqualified):</strong> Disqualified during the race
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: Can I use this app on iPad?</div>
+                    <div class="faq-answer">A: Currently, Race Countdown is iPhone-only. iPad support may be added in a future update.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: Is there an Android version?</div>
+                    <div class="faq-answer">A: Not yet, but we're planning to release an Android version soon! Follow us for updates.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: The QR code on screenshots - what is it for?</div>
+                    <div class="faq-answer">A: When you share a screenshot, it includes a QR code that links to the Race Countdown app download page. This makes it easy for your friends to discover and download the app!</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Troubleshooting Section -->
+            <div class="section">
+                <h2>🔧 Troubleshooting</h2>
+
+                <h3>App Crashes or Won't Open</h3>
+                <ol>
+                    <li>Force quit the app and reopen it</li>
+                    <li>Restart your iPhone</li>
+                    <li>Check if you have the latest iOS version installed</li>
+                    <li>Delete and reinstall the app (your data will be lost, but this often fixes issues)</li>
+                </ol>
+
+                <h3>Calendar Integration Not Working</h3>
+                <ol>
+                    <li>Go to iPhone Settings → Race Countdown → Calendars</li>
+                    <li>Make sure calendar access is enabled</li>
+                    <li>Try adding the race to calendar again</li>
+                </ol>
+
+                <h3>Screenshots Won't Save</h3>
+                <ol>
+                    <li>Go to iPhone Settings → Race Countdown → Photos</li>
+                    <li>Select "Add Photos Only" or "Full Access"</li>
+                    <li>Try saving again</li>
+                </ol>
+
+                <h3>Language Not Changing</h3>
+                <ol>
+                    <li>Change language in Settings → Language</li>
+                    <li>Close the app completely (swipe up from app switcher)</li>
+                    <li>Reopen the app</li>
+                </ol>
+
+                <h3>Countdown Timer Showing Wrong Time</h3>
+                <ol>
+                    <li>Check that your iPhone's date and time are set correctly</li>
+                    <li>Go to iPhone Settings → General → Date & Time</li>
+                    <li>Enable "Set Automatically"</li>
+                </ol>
+
+                <h3>Still Having Issues?</h3>
+                <p>If you're still experiencing problems, please contact our support team (see below). Include:</p>
+                <ul>
+                    <li>Your iPhone model</li>
+                    <li>iOS version</li>
+                    <li>Detailed description of the issue</li>
+                    <li>Screenshots if possible</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Privacy Section -->
+            <div class="section">
+                <h2>🔒 Privacy & Data</h2>
+                <p><strong>Your privacy is our priority.</strong> Race Countdown is designed with privacy in mind:</p>
+                <ul class="feature-list">
+                    <li>All data stored locally on your device</li>
+                    <li>No user accounts or registration required</li>
+                    <li>No tracking, analytics, or advertising</li>
+                    <li>No data collected or shared with third parties</li>
+                    <li>Calendar and photo access only used for their stated purposes</li>
+                    <li>Works completely offline - no internet required</li>
+                </ul>
+                <p>For full details, please read our <a href="https://racecountdown-app.newtree.tech/privacy-policy.html" target="_blank">Privacy Policy</a>.</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- System Requirements -->
+            <div class="section">
+                <h2>📱 System Requirements</h2>
+                <ul>
+                    <li><strong>Platform:</strong> iPhone only</li>
+                    <li><strong>iOS Version:</strong> iOS 13.0 or later</li>
+                    <li><strong>Storage:</strong> Approximately 50 MB</li>
+                    <li><strong>Internet:</strong> Not required (offline-first design)</li>
+                    <li><strong>Permissions:</strong>
+                        <ul>
+                            <li>Calendar access (optional, for adding races to calendar)</li>
+                            <li>Photos access (optional, for saving screenshots)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Contact Section -->
+            <div class="section">
+                <div class="contact-box">
+                    <h3>💬 Need More Help?</h3>
+                    <p>We're here to help! Contact our support team and we'll get back to you within 24-48 hours.</p>
+                    <a href="mailto:support@racecountdown-app.newtree.tech?subject=Race%20Countdown%20Support%20Request" class="btn">Email Support</a>
+                    <p style="margin-top: 20px; font-size: 14px;">
+                        <strong>Email:</strong> support@racecountdown-app.newtree.tech<br>
+                        <strong>Response Time:</strong> Within 24-48 hours
+                    </p>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Feedback Section -->
+            <div class="section">
+                <h2>⭐ Love Race Countdown?</h2>
+                <p>If you enjoy using Race Countdown, please consider:</p>
+                <ul>
+                    <li>Rating us on the App Store (it really helps!)</li>
+                    <li>Sharing the app with fellow runners and athletes</li>
+                    <li>Sending us your feedback and feature suggestions</li>
+                </ul>
+                <p>Your support helps us continue improving Race Countdown for athletes everywhere!</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Race Countdown. All rights reserved.</p>
+            <p>
+                <a href="https://racecountdown-app.newtree.tech">Home</a> |
+                <a href="https://racecountdown-app.newtree.tech/privacy-policy.html">Privacy Policy</a> |
+                <a href="mailto:support@racecountdown-app.newtree.tech">Contact</a>
+            </p>
+            <p style="margin-top: 15px; font-size: 12px; color: #999;">
+                Race Countdown is not affiliated with any race organization.<br>
+                All race data and times are user-entered and not verified.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+
