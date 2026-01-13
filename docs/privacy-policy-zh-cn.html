@@ -1,103 +1,261 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>赛事倒计时 – 隐私政策</title>
-    <meta name="description" content="赛事倒计时移动应用程序的隐私政策。" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <h1>赛事倒计时 – 隐私政策</h1>
-      <p class="updated">最后更新：2025年10月12日</p>
-      <p class="language-switch">
-        <a href="privacy-policy.html">English</a>
-      </p>
-    </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="比赛倒计时隐私政策 - 我们如何保护您的数据和隐私。">
+    <title>比赛倒计时 - 隐私政策</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <main>
-      <section>
-        <h2>概述</h2>
-        <p>
-          赛事倒计时（以下简称"应用程序"）尊重您的隐私。本政策说明我们收集和不收集的信息、
-          任何信息的使用方式以及您的权利。如果这里的任何内容与您的期望冲突，
-          请联系我们，以便我们能够及时解决。
-        </p>
-      </section>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f5f7 0%, #e8e8ed 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
 
-      <section>
-        <h2>我们收集的信息</h2>
-        <p>
-          默认情况下，应用程序<strong>不</strong>收集、存储或传输个人信息。
-          应用程序在您的设备上本地处理数据，不包含广告或第三方分析。
-        </p>
-        <p>
-          如果您选择联系我们寻求支持，我们可能会收到您的电子邮件和消息内容。
-          我们仅使用这些信息来回复您的询问。
-        </p>
-      </section>
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
 
-      <section>
-        <h2>崩溃报告和诊断</h2>
-        <p>
-          如果您在iOS设置中选择与开发者共享分析数据，Apple可能会提供匿名化的崩溃日志和诊断信息。
-          我们仅使用这些报告来改进稳定性和性能。
-        </p>
-      </section>
+        .header {
+            background: linear-gradient(135deg, #007AFF 0%, #00C6FF 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+        }
 
-      <section>
-        <h2>数据存储和保留</h2>
-        <p>
-          应用程序数据存储在您的设备上。我们不为此应用程序运营自己的后端服务。
-          如果您联系支持，相关电子邮件仅在处理您的请求所需的时间内保留。
-        </p>
-      </section>
+        .app-icon {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 24px;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
 
-      <section>
-        <h2>共享和转移</h2>
-        <p>
-          我们不出售、出租或共享您的个人信息。我们不向第三方传输数据，
-          除非法律要求。
-        </p>
-      </section>
+        .header h1 {
+            font-size: 42px;
+            margin-bottom: 12px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
 
-      <section>
-        <h2>儿童隐私</h2>
-        <p>
-          应用程序不面向13岁以下的儿童。我们不会故意收集儿童的个人信息。
-          如果您认为儿童提供了个人信息，请联系我们将其删除。
-        </p>
-      </section>
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+            font-weight: 500;
+        }
 
-      <section>
-        <h2>您的权利</h2>
-        <p>
-          根据您所在的地区，您可能有权访问、更正或删除个人信息。
-          由于应用程序不收集个人数据，大多数请求仅适用于您发送给我们的通信。
-          请联系我们，我们将提供协助。
-        </p>
-      </section>
+        .content {
+            padding: 60px 50px;
+        }
 
-      <section>
-        <h2>联系方式</h2>
-        <p>
-          有关本政策的问题或请求，请发送至：
-          <a href="mailto:support@racecountdown-app.newtree.tech">support@racecountdown-app.newtree.tech</a>。
-        </p>
-      </section>
+        .section {
+            margin-bottom: 50px;
+        }
 
-      <section>
-        <h2>本政策的变更</h2>
-        <p>
-          我们可能会更新本政策以反映改进或法律要求。重大变更将通过更新上方的日期来反映。
-          您在变更后继续使用应用程序即表示接受。
-        </p>
-      </section>
-    </main>
+        .section:last-child {
+            margin-bottom: 0;
+        }
 
-    <footer class="site-footer">
-      <p>&copy; 2025 赛事倒计时</p>
-    </footer>
-  </body>
+        h2 {
+            color: #1d1d1f;
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            border-bottom: 1px solid #f5f5f7;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #1d1d1f;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: 18px;
+            color: #424245;
+            font-size: 17px;
+        }
+
+        ul {
+            margin-left: 24px;
+            margin-bottom: 24px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            color: #424245;
+            font-size: 17px;
+        }
+
+        .highlight-box {
+            background: #f5f5f7;
+            padding: 30px;
+            border-radius: 24px;
+            margin-bottom: 40px;
+            border-left: 6px solid #007AFF;
+        }
+
+        .highlight-box strong {
+            color: #1d1d1f;
+            font-size: 19px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        .contact-box {
+            background: #1d1d1f;
+            color: white;
+            padding: 40px;
+            border-radius: 24px;
+            margin-top: 40px;
+        }
+
+        .contact-box h3 {
+            color: white;
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        .contact-box p {
+            color: #86868b;
+            font-size: 16px;
+        }
+
+        .contact-box a {
+            color: #007AFF;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer {
+            background: #f5f5f7;
+            padding: 40px 50px;
+            text-align: center;
+            color: #86868b;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #007AFF;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 60px 24px;
+            }
+
+            .content {
+                padding: 40px 24px;
+            }
+
+            .header h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="app-icon">🔒</div>
+            <h1>隐私政策</h1>
+            <p>比赛倒计时 版本 2.0.0</p>
+        </div>
+
+        <div class="content">
+            <div class="highlight-box">
+                <strong>我们的隐私承诺</strong>
+                <p>“比赛倒计时”秉持隐私至上的设计理念。我们不出售您的数据，不使用追踪插件，也不投放广告。您的数据完全属于您自己。</p>
+            </div>
+
+            <div class="section">
+                <h2>1. 数据收集与存储</h2>
+                <p>我们尽量减少收集的数据，以保障您的使用体验：</p>
+                <ul>
+                    <li><strong>本地存储：</strong> 默认情况下，所有比赛数据（名称、日期、目标、结果）均仅存储在您的设备本地。</li>
+                    <li><strong>云同步（可选）：</strong> 如果您在 iOS 上开启 iCloud 同步，您的数据将存储在您的个人 iCloud 账户中。我们无法访问该账户或其中存储的数据。</li>
+                    <li><strong>个人资料：</strong> 如果您添加了个人头像或显示名称，这些信息仅存储在您的设备本地。</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>2. 设备权限</h2>
+                <p>本应用仅在您主动使用特定功能时请求以下权限：</p>
+                <ul>
+                    <li><strong>日历：</strong> 仅用于将比赛项目和提醒添加到您的系统日历中。</li>
+                    <li><strong>照片库：</strong> 仅用于保存生成的比赛卡片或选择个人头像。</li>
+                    <li><strong>健康应用（可选）：</strong> 用于同步您的每周跑量和个人最佳记录，以提供性能分析。</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>3. 第三方服务</h2>
+                <p>我们不使用任何会识别您身份的第三方分析工具或营销插件。我们仅依赖 Apple App Store 提供的标准匿名崩溃报告来改进应用稳定性。</p>
+            </div>
+
+            <div class="section">
+                <h2>4. 数据共享</h2>
+                <p>我们不会与任何第三方共享您的个人信息。您的数据唯一的“共享”方式是当您主动使用“分享”功能生成截图或比赛卡片并发送给他人时。</p>
+            </div>
+
+            <div class="section">
+                <h2>5. 未成年人隐私</h2>
+                <p>比赛倒计时适合所有年龄段的用户。我们不收集儿童的个人信息，也不针对儿童投放广告。</p>
+            </div>
+
+            <div class="section">
+                <h2>6. 您的权利</h2>
+                <p>您对自己的数据拥有完全的控制权。您可以随时在应用设置中删除单个比赛或清除所有应用数据。卸载应用将删除所有本地存储的数据。</p>
+            </div>
+
+            <div class="contact-box">
+                <h3>疑问？</h3>
+                <p>如果您对隐私政策有任何疑问，请通过以下方式联系我们：</p>
+                <p><strong>电子邮件：</strong> <a href="mailto:support@racecountdown-app.newtree.tech">support@racecountdown-app.newtree.tech</a></p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 比赛倒计时. 保留所有权利。</p>
+            <p style="margin-top: 10px;">
+                <a href="support.html">支持</a> |
+                <a href="terms.html">服务条款</a>
+            </p>
+        </div>
+    </div>
+</body>
 </html>

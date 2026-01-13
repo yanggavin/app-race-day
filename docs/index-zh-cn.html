@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Race Countdown - The ultimate race tracking and pace calculation app for runners, cyclists, and triathletes.">
-    <title>Race Countdown | Track Your Next PR</title>
+    <meta name="description" content="比赛倒计时 - 为跑者、骑行者和铁人三项运动员设计的终极比赛追踪与配速计算应用。">
+    <title>比赛倒计时 | 记录你的下一次突破</title>
     <style>
         :root {
             --primary: #007AFF;
@@ -21,7 +21,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
         body {
@@ -92,17 +92,17 @@
         }
 
         .hero-content h1 {
-            font-size: clamp(48px, 10vw, 96px);
+            font-size: clamp(40px, 8vw, 88px);
             font-weight: 800;
-            letter-spacing: -2px;
+            letter-spacing: -1px;
             margin-bottom: 24px;
             line-height: 1.1;
         }
 
         .hero-content p {
-            font-size: clamp(18px, 3vw, 24px);
+            font-size: clamp(18px, 2.5vw, 22px);
             color: var(--gray);
-            max-width: 700px;
+            max-width: 800px;
             margin: 0 auto 40px;
         }
 
@@ -200,14 +200,6 @@
             width: 100%;
         }
 
-        .mockup-img {
-            width: 100%;
-            height: auto;
-            border-radius: 40px;
-            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
-            border: 8px solid #333;
-        }
-
         /* Stats Section */
         .stats-banner {
             background: var(--primary-gradient);
@@ -267,7 +259,7 @@
 
         @media (max-width: 768px) {
             .hero-content h1 {
-                font-size: 48px;
+                font-size: 40px;
             }
             .nav {
                 padding: 20px;
@@ -283,26 +275,25 @@
 </head>
 <body>
     <nav class="nav">
-        <a href="#" class="logo">Race Countdown</a>
+        <a href="#" class="logo">比赛倒计时</a>
         <div class="nav-links">
-            <a href="#features">Features</a>
-            <a href="support.html">Support</a>
-            <a href="privacy-policy.html">Privacy</a>
+            <a href="#features">功能特色</a>
+            <a href="support.html">支持</a>
+            <a href="privacy-policy-zh-cn.html">隐私政策</a>
         </div>
     </nav>
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Track Your Next PR.</h1>
-            <p>The ultimate race countdown and pace calculator for dedicated athletes. Stay focused, stay motivated, and hit your goals.</p>
+            <h1>见证你的每一次突破</h1>
+            <p>为运动爱好者打造的终极比赛追踪与配速计算工具。保持专注，保持动力，达成你的每一个目标。</p>
             <div class="cta-buttons">
-                <a href="https://apps.apple.com/app/id6753940820" class="btn btn-primary">Download on App Store</a>
-                <a href="#features" class="btn btn-secondary">Explore Features</a>
+                <a href="https://apps.apple.com/app/id6753940820" class="btn btn-primary">在 App Store 下载</a>
+                <a href="#features" class="btn btn-secondary">探索功能</a>
             </div>
             <div class="mockup-container">
-                <!-- Using a generic high-quality representation since we can't link local files directly to public URL easily without hosting -->
                 <div style="background: linear-gradient(135deg, #2c2c2e 0%, #1c1c1e 100%); width: 100%; aspect-ratio: 16/9; border-radius: 20px; border: 4px solid #333; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                    <span style="font-size: 80px;">🏃‍♂️ 02 : 14 : 35</span>
+                    <span style="font-size: clamp(30px, 6vw, 80px);">🏃‍♂️ 02 : 14 : 35</span>
                 </div>
             </div>
         </div>
@@ -310,39 +301,39 @@
 
     <section id="features" class="section">
         <div class="section-header">
-            <h2>Everything you need to race.</h2>
-            <p style="color: var(--gray); font-size: 20px;">Designed by runners, for runners.</p>
+            <h2>全方位的比赛陪伴</h2>
+            <p style="color: var(--gray); font-size: 20px;">由跑者设计，为跑者服务。</p>
         </div>
         <div class="grid">
             <div class="card">
                 <span class="card-icon">⏱️</span>
-                <h3>Precise Countdown</h3>
-                <p>Track your upcoming races down to the second. Beautifully designed countdowns that keep you motivated during your training block.</p>
+                <h3>精准倒计时</h3>
+                <p>精确到秒的比赛追踪。精美的倒计时设计，在整个训练周期中为你提供源源不断的动力。</p>
             </div>
             <div class="card">
                 <span class="card-icon">🧮</span>
-                <h3>Pace Calculator</h3>
-                <p>Professional-grade pace calculations. Calculate goal times, KM splits, and training zones (Easy, Marathon, Threshold, Interval, Repetition).</p>
+                <h3>配速计算器</h3>
+                <p>专业级配速计算。计算目标时间、公里分段以及训练区间（轻松跑、马拉松、乳酸阈值、间歇跑、重复跑）。</p>
             </div>
             <div class="card">
                 <span class="card-icon">📅</span>
-                <h3>Calendar Sync</h3>
-                <p>Add your races directly to your system calendar with automatic reminders one day and one week before the start.</p>
+                <h3>日历同步</h3>
+                <p>将比赛直接添加到系统日历，并在开赛前一天和一周自动发送提醒，确保万无一失。</p>
             </div>
             <div class="card">
                 <span class="card-icon">☁️</span>
-                <h3>Cloud Sync</h3>
-                <p>Keep your races in sync across your Apple devices using iCloud. Your data is always where you need it.</p>
+                <h3>云端同步</h3>
+                <p>通过 iCloud 在你的 Apple 设备间同步比赛数据。你的数据始终随你而行。</p>
             </div>
             <div class="card">
                 <span class="card-icon">🏥</span>
-                <h3>Health Integration</h3>
-                <p>Sync with Apple Health to track your weekly mileage and personal bests directly within the app.</p>
+                <h3>健康集成</h3>
+                <p>同步 Apple Health 数据，在应用内直接查看每周跑量和个人最佳纪录。</p>
             </div>
             <div class="card">
                 <span class="card-icon">🔒</span>
-                <h3>Privacy First</h3>
-                <p>No tracking, no ads, and no selling your data. Everything is stored locally or in your private cloud account. Privacy isn't a feature, it's a foundation.</p>
+                <h3>隐私至上</h3>
+                <p>无追踪、无广告、不出售数据。一切数据均存储在本地或您的私有云账户中。隐私不是一种功能，而是我们的基石。</p>
             </div>
         </div>
     </section>
@@ -351,15 +342,15 @@
         <div class="stats-grid">
             <div class="stat-item">
                 <h4>100%</h4>
-                <p>Privacy Focused</p>
+                <p>隐私保护</p>
             </div>
             <div class="stat-item">
                 <h4>50+</h4>
-                <p>Theme Skins</p>
+                <p>主题皮肤</p>
             </div>
             <div class="stat-item">
                 <h4>v2.0.0</h4>
-                <p>Latest Version</p>
+                <p>最新版本</p>
             </div>
         </div>
     </section>
@@ -367,14 +358,14 @@
     <footer>
         <div class="footer-content">
             <div class="footer-info">
-                <a href="#" class="logo" style="margin-bottom: 20px; display: block;">Race Countdown</a>
-                <p class="copyright">&copy; 2026 Newtree Tech. All rights reserved.</p>
+                <a href="#" class="logo" style="margin-bottom: 20px; display: block;">比赛倒计时</a>
+                <p class="copyright">&copy; 2026 Newtree Tech. 保留所有权利。</p>
             </div>
             <div class="footer-links">
-                <a href="support.html">Support</a>
+                <a href="support.html">支持</a>
                 <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="privacy-policy-zh-cn.html">隐私政策 (CN)</a>
-                <a href="terms.html">Terms of Service</a>
+                <a href="privacy-policy-zh-cn.html">隐私政策</a>
+                <a href="terms.html">服务条款</a>
             </div>
         </div>
     </footer>
