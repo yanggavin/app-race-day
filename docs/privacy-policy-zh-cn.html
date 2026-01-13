@@ -31,6 +31,7 @@
         }
 
         .header {
+            position: relative;
             background: linear-gradient(135deg, #007AFF 0%, #00C6FF 100%);
             color: white;
             padding: 80px 40px;
@@ -169,6 +170,26 @@
             margin: 0 12px;
         }
 
+        .lang-switcher {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .lang-switcher:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
         @media (max-width: 768px) {
             .header {
                 padding: 60px 24px;
@@ -185,12 +206,20 @@
             h2 {
                 font-size: 24px;
             }
+
+            .lang-switcher {
+                top: 10px;
+                right: 10px;
+                padding: 6px 12px;
+                font-size: 12px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
+            <a href="privacy-policy.html" class="lang-switcher">English</a>
             <div class="app-icon">🔒</div>
             <h1>隐私政策</h1>
             <p>比赛倒计时 版本 2.0.0</p>

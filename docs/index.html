@@ -91,6 +91,24 @@
             opacity: 1;
         }
 
+        .lang-switch {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            opacity: 0.9;
+            padding: 8px 16px;
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s;
+        }
+
+        .lang-switch:hover {
+            opacity: 1;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
         .hero-content h1 {
             font-size: clamp(48px, 10vw, 96px);
             font-weight: 800;
@@ -288,6 +306,7 @@
             <a href="#features">Features</a>
             <a href="support.html">Support</a>
             <a href="privacy-policy.html">Privacy</a>
+            <a href="index-zh-cn.html" class="lang-switch">中文</a>
         </div>
     </nav>
 
